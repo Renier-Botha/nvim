@@ -16,3 +16,5 @@ vim.opt.shiftwidth = 0 -- set to 0 to default to tabstop value
 --[[ vim.cmd("colorscheme habamax") ]]
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.keymap.set('n', '<leader>rn', ':set relativenumber!<CR>', { desc = 'Toggle relative line numbers', silent = true })
