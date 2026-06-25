@@ -1,7 +1,12 @@
 return {
     "https://github.com/folke/which-key.nvim",
     event = "VeryLazy",
-    opts = {}, -- lazy.nvim passes this table to require("which-key").setup()
+    opts = { -- lazy.nvim passes this table to require("which-key").setup()
+        spec = {
+            { "<leader>t", group = "Terminal" },
+            { "<leader>x", group = "Trouble" },
+        },
+    },
     keys = {
         {
             "<leader>?",
