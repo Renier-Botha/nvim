@@ -5,9 +5,27 @@ return {
 	lazy = false,
 	keys = {
 		-- Picker keymaps, mirroring the old fzf.vim bindings.
-		-- { "<leader><leader>", function() Snacks.picker.files() end, desc = "Find files" },
-		-- { "<leader>,", function() Snacks.picker.buffers() end, desc = "Find buffers" },
-		-- { "<leader>/", function() Snacks.picker.grep() end, desc = "Search project" },
+		{
+			"<leader><leader>",
+			function()
+				Snacks.picker.files()
+			end,
+			desc = "Find files",
+		},
+		{
+			"<leader>,",
+			function()
+				Snacks.picker.buffers()
+			end,
+			desc = "Find buffers",
+		},
+		{
+			"<leader>/",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "Search project",
+		},
 	},
 	---@type snacks.Config
 	opts = {
@@ -20,7 +38,7 @@ return {
 		explorer = { enabled = false }, -- File tree (built on the picker; needs picker too)
 		indent = { enabled = false }, -- Indent guides + scope highlighting (overlaps indent-blankline)
 		input = { enabled = false }, -- Prettier vim.ui.input popups
-		picker = { enabled = false }, -- Fuzzy finder (replaces fzf.vim)
+		picker = { enabled = true }, -- Fuzzy finder; on so obsidian.nvim can use it (fzf.vim keymaps untouched)
 		quickfile = { enabled = false }, -- Render a file before plugins load, for faster startup
 		scope = { enabled = false }, -- Scope detection / text objects based on indent
 		scroll = { enabled = false }, -- Smooth scrolling animation

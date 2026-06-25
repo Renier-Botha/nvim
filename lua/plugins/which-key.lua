@@ -3,6 +3,7 @@ return {
     event = "VeryLazy",
     opts = { -- lazy.nvim passes this table to require("which-key").setup()
         spec = {
+            { "<leader>o", group = "Obsidian" },
             { "<leader>t", group = "Terminal" },
             { "<leader>x", group = "Trouble" },
         },
